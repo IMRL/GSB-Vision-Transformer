@@ -25,9 +25,48 @@ Note that our training code refers to Q-ViT. For more details of the training co
      ```
      # To train model with one GPU
      # stage 1
-     python train_stage1.py --batch-size (Choose the appropriate batchsize according to the GPU)  --teacher-path  （Path to the folder where the teacher network parameter file is stored） --teacher_p （Path to the teacher network parameter file） --data-path （path to the dataset） --data-set （The name of the data set, please refer to file datasets.py for details）--output_dir (Path to store output)
+     python train_stage1.py --batch-size (Choose the appropriate batchsize according to the GPU)  --teacher-path  （Path to the folder where the parameter file of teacher network  is stored） --teacher_p （Path to the parameter file  of teacher network） --data-path （path to the dataset） --data-set （The name of the data set, please refer to file datasets.py for details）--output_dir (Path to store output)
+     # stage 2
+     python train_stage2.py --batch-size ** --teacher-path ** --teacher_p ** --data-path ** --data-set ** --output_dir** --finetune (Fill in the path of the file output by stage1 here)
+     
+     # To train model with Multiple GPUs
+     # stage 1
+     python -m torch.distributed.launch --nproc_per_node=2 （Change to the total number of your GPU） --use_env train_stage1.py  --batch-size ** --teacher-path ** --teacher_p ** --data-path ** --data-set ** --output_dir**
+     # stage 2
+     python -m torch.distributed.launch --nproc_per_node=2 （Change to the total number of your GPU） --use_env train_stage2.py  --batch-size ** --teacher-path ** --teacher_p ** --data-path ** --data-set ** --output_dir** --finetune **   
+     # ** means your parameters
+     ```
+ * Test the network
+     ```
+     python test.py -data-path ** --data-set **  --resume （path to the file of model parameter ）
+     ```
 ### Tips
    Any problem, please contact the first author (Email: gaotian970228@njust.edu.cn).
+   
+   Our pre-trained model can be downloaded at the following link
+   * CIFAR  
+   
+      [teacher model](https://drive.google.com/file/d/1h_NWxG0-TcUU6-CbUvzclljfzxBlzCn4/view?usp=share_link)
+      
+      [stage1](https://drive.google.com/file/d/1Pa5tprJuP9dFmq-F-hS-o_VnUb9foKSq/view?usp=share_link)
+      
+      [stage2](https://drive.google.com/file/d/15gHr5m_9ukbcGssx1CBymrnL6gLNJ0-v/view?usp=share_link)
+   * Oxford-Flowers102
+      
+         
+      [teacher model](https://drive.google.com/file/d/13N_uqWNCDwj5g6AgBXqqxzVBs1pBPnGp/view?usp=share_link)
+      
+      [stage1](https://drive.google.com/file/d/1fPccxP5BEdiexw3EqwsZuCvgNRjMcLUL/view?usp=share_link)
+      
+      [stage2](https://drive.google.com/file/d/1c5NLlvShWbB9RIlP70F0zKEA1KbCcXMU/view?usp=share_link)
+   * Chaoyang Datasets
+   
+         
+      [teacher model](https://drive.google.com/file/d/1jOBObIn3fzRQvRrT_RSbWVJNKeN_iAro/view?usp=share_link)
+      
+      [stage1](https://drive.google.com/file/d/1_tGscV2lRYv1E9ueDdn4NEonN9bM8OpQ/view?usp=share_link)
+      
+      [stage2](https://drive.google.com/file/d/1xSLqDuAS6V_B9YYbk4Jrgjyq_YHNmEnt/view?usp=share_link)
 ### Citation
 If you find this work useful, please consider citing:
 
@@ -51,3 +90,5 @@ Our code refers to Q-ViT(https://github.com/YanjingLi0202/Q-ViT), BiT(https://gi
 * Zhu, Chuang and Chen, Wenkai and Peng, Ting and Wang, Ying and Jin, Mulan, Hard Sample Aware Noise Robust Learning for Histopathology Image Classification, IEEE transactions on medical imaging, 2021
 * Learning Multiple Layers of Features from Tiny Images, Alex Krizhevsky, 2009.
 * Nilsback, M-E. and Zisserman, A. Automated flower classification over a large number of classes, Proceedings of the Indian Conference on Computer Vision, Graphics and Image Processing (2008)
+* Li Y, Xu S, Zhang B, et al. Q-ViT: Accurate and Fully Quantized Low-bit Vision Transformer. NIPS, 2022.
+* Liu Z, Oguz B, Pappu A, et al. Bit: Robustly binarized multi-distilled transformer. NIPS, 2022.
