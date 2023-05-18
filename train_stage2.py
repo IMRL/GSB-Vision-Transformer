@@ -207,7 +207,7 @@ def get_args_parser():
     parser.add_argument('--no-pin-mem', action='store_false', dest='pin_mem',
                         help='')
     parser.set_defaults(pin_mem=True)
-    parser.set_defaults(eval=True)
+    parser.set_defaults(eval=False)
 
     parser.add_argument('--weight_layerwise', default=True, type=lambda x: bool(int(x)))
     parser.add_argument('--input_layerwise', default=True, type=lambda x: bool(int(x)))
