@@ -1,4 +1,5 @@
 This code is an implementation of our work "GSB: Group Superposition Binarization for Vision Transformer with Limited Training Samples."
+
 [Reference]: Tian Gao and Cheng-Zhong Xu and Le Zhang and Hui Kong, GSB: Group Superposition Binarization for Vision Transformer with Limited Training Samples, arXiv,2023
 
 
@@ -11,7 +12,7 @@ Vision Transformer (ViT) has performed remarkably in various computer vision tas
 * Oxford-Flowers102 Datasets （Small dataset, only 20 samples for one class）[Homepage link](https://www.robots.ox.ac.uk/~vgg/data/flowers/102)
 * Chaoyang Datasets (Medical image w/ label noise) [Homepage link](https://bupt-ai-cz.github.io/HSA-NRL/)  
 ### Environment and Dependencies
-Our code was tested using Python 3.8.12 with Pytorch 1.10.0 and cuda 11.3  
+Our code was tested with Python 3.8.12, Pytorch 1.10.0,and cuda 11.3  
 
 Required python packages：
 * PyTorch (version 1.10.0)
