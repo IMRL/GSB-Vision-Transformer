@@ -1,6 +1,6 @@
 This code is an implementation of our work "GSB: Group Superposition Binarization for Vision Transformer with Limited Training Samples."
 
-[Reference]: Tian Gao and Cheng-Zhong Xu and Le Zhang and Hui Kong, GSB: Group Superposition Binarization for Vision Transformer with Limited Training Samples, arXiv,2023
+[Reference]: Tian Gao and Cheng-Zhong Xu and Le Zhang and Hui Kong, GSB: Group Superposition Binarization for Vision Transformer with Limited Training Samples, Neural Networks, 2024
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
