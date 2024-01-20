@@ -74,7 +74,7 @@ If you find this work useful, please consider citing:
     @ARTICLE{gao2023gsb,
           title={GSB: Group Superposition Binarization for Vision Transformer with Limited Training Samples}, 
           author={Tian Gao and Cheng-Zhong Xu and Le Zhang and Hui Kong},
-          year={2023},
+          year={2024},
           eprint={2305.07931},
           archivePrefix={arXiv},
           primaryClass={cs.CV}
