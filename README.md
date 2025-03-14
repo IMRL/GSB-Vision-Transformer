@@ -71,14 +71,15 @@ Note that our training code refers to Q-ViT. For more details of the training co
 ### Citation
 If you find this work useful, please consider citing:
 
-    @ARTICLE{gao2023gsb,
-          title={GSB: Group Superposition Binarization for Vision Transformer with Limited Training Samples}, 
-          author={Tian Gao and Cheng-Zhong Xu and Le Zhang and Hui Kong},
-          year={2024},
-          eprint={2305.07931},
-          archivePrefix={arXiv},
-          primaryClass={cs.CV}
-          }
+@article{gao2024gsb,
+  title={GSB: Group superposition binarization for vision transformer with limited training samples},
+  author={Gao, Tian and Xu, Cheng-Zhong and Zhang, Le and Kong, Hui},
+  journal={Neural Networks},
+  volume={172},
+  pages={106133},
+  year={2024},
+  publisher={Elsevier}
+}
 ### License
 Our code is released under the MIT License (see LICENSE file for details).
 ### Acknowledgement
